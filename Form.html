@@ -7,7 +7,22 @@
   input{
     font-weight:bold;
   }
+  button{
+    color:white;
+    background-color:skyblue;
+    border-radius:10px;
+    width:150px;
+    height:25px;
+    justify-content:center;
+  }
   </style>
+<script>
+function form()  {
+  const message = document.querySelector("p");
+  const name = document.getElementById("username") .value;
+  message.innerHTML = name;
+}
+</script>
 </head>
 <body>
   <form>
@@ -15,20 +30,26 @@
     <caption>Form</caption>
       <tr>
         <td>Name:</td>
-        <td><input type="text" placeholder="Enter name"></td>
+        <td><input  id="username "type="text" placeholder="Enter name"></td>
       </tr><tr></tr>
       <tr>
         <td>Pick a color:</td>
         <td>  <input type="color" ></td></tr><tr></tr>
       <tr>
         <td> Dateofbirth:</td>
-        <td> <input type="date"></td></tr><tr></tr>
+        <td> <input type="date" placeholder="BirthDate"></td></tr><tr></tr>
       <tr>
         <td>Range:</td>
-        <td> <input type=" range" ></td></tr><tr></tr>
+        <td> <input type=" range"  placeholder="Range"></td></tr><tr></tr>
       <tr>
       <td>Check:</td>
         <td> <input type="checkbox"></td></tr>
-  </feildset>
+      <tr>
+        <td></td>
+        <td><button onclick="form()">Submit</button></td>
+      </tr>
+    </table>
+    <p  id="demo">hii</p>
+  </form>
 </body>
 </html>
